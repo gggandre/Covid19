@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DesarrolloMovil/Covid19/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/DesarrolloMovil/Covid19/app/src/main/res/layout/fragment_grafica.xml" value="0.4" />
+        <entry key="..\:/DesarrolloMovil/Covid19/app/src/main/res/layout/fragment_renglon_pais.xml" value="0.25" />
+        <entry key="..\:/DesarrolloMovil/Covid19/app/src/main/res/layout/renglon_pais.xml" value="0.25" />
         <entry key="..\:/DesarrolloMovil/covid19-android-main/app/src/main/res/layout/activity_main.xml" value="0.33958333333333335" />
         <entry key="..\:/DesarrolloMovil/covid19-android-main/app/src/main/res/layout/country_row.xml" value="0.33958333333333335" />
         <entry key="..\:/DesarrolloMovil/covid19-android-main/app/src/main/res/layout/fragment_country_graph.xml" value="0.33958333333333335" />
