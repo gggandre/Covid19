@@ -15,7 +15,10 @@ import mx.itesm.ag.covid19.databinding.FragmentRenglonPaisBinding
 import mx.itesm.ag.covid19.model.Pais
 import mx.itesm.ag.covid19.viewmodel.ListaPaisesVM
 
-
+/**
+ * @author Gilberto AndreGarcía Gaytán
+ * la vista del fragmento lista paises
+ */
 class ListaPaisesFragment : Fragment() {
 
     private lateinit var binding: FragmentRenglonPaisBinding
@@ -39,7 +42,7 @@ class ListaPaisesFragment : Fragment() {
     }
     private fun Observables() {
         viewModel.paises.observe(this) { countryList ->
-            AdaptadorPais?.countries = countryList.toTypedArray()
+            AdaptadorPais?.paises = countryList.toTypedArray()
             AdaptadorPais?.notifyDataSetChanged()
         }
     }

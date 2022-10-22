@@ -12,33 +12,27 @@ import mx.itesm.ag.covid19.R
 import mx.itesm.ag.covid19.model.Pais
 
 /**
- * @author David Damian
- * The datasource for the RecyclerView
+ * @author Gilberto AndreGarcía Gaytán
+ * Los datos de
+ * el recycler view como se vio en clase
  */
-class AdaptadorPais(private val context: Context, var countries: Array<Pais>)
-    : RecyclerView.Adapter<AdaptadorPais.CountryRow>(), View.OnClickListener {
-
+class AdaptadorPais(private val context: Context, var paises: Array<Pais>) : RecyclerView.Adapter<AdaptadorPais.Fila>(), View.OnClickListener {
     private var listener: View.OnClickListener? = null
 
-    // This function is called each time a row is created
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryRow {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Fila { // se llama cada que la lista
+        //se despliega
         val view = LayoutInflater.from(context).inflate(R.layout.renglon_pais, parent, false)
         view.setOnClickListener(this)
-        return CountryRow(view)
+        return Fila(view)
     }
-
-    // To populate a row (put data in the 'position' row
-    override fun onBindViewHolder(holder: CountryRow, position: Int) {
-        val country = countries[position]
-        holder.set(country)
+    override fun onBindViewHolder(holder: Fila, position: Int) {
+        val pais =paises[position]
+        holder.set(pais) // Pone la fila en su posicion
     }
-
-    // The number of rows in the RecyclerView
     override fun getItemCount(): Int {
-        return countries.size
+        return paises.size //recyclerview
     }
-
-    class CountryRow (var countryRow: View) : RecyclerView.ViewHolder(countryRow) {
+    class Fila (var countryRow: View) : RecyclerView.ViewHolder(countryRow) {
         fun set(country: Pais) {
             countryRow.findViewById<TextView>(R.id.tvCountryName).text = country.name
             countryRow.findViewById<TextView>(R.id.tvCases).text = "${country.cases}"
@@ -46,11 +40,9 @@ class AdaptadorPais(private val context: Context, var countries: Array<Pais>)
             Glide.with(countryRow.context).load(country.info["flag"]).into(imgFlag)
         }
     }
-
     override fun onClick(view: View) {
         listener?.onClick(view)
     }
-
     fun setOnClickListener(listener: View.OnClickListener) {
         this.listener = listener
     }

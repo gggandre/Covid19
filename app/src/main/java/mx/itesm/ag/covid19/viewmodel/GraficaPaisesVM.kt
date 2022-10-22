@@ -10,7 +10,10 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
+/**
+ * @author Gilberto AndreGarcía Gaytán
+ * El viewmodel de la grafico
+ */
 class GraficaPaisesVM : ViewModel() {
     val pais = MutableLiveData<Pais>()
     val paisDatos = MutableLiveData<PaisDatos>()
@@ -34,7 +37,6 @@ class GraficaPaisesVM : ViewModel() {
                 }
 
             }
-
             override fun onFailure(call: Call<Pais>, t: Throwable) {
                 println("Error en los datos:")
             }

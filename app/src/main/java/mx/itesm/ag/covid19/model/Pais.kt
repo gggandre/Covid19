@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * @author Gilberto André García Gaytán
- * Class to represent one country.
+ * Representa al pais
  */
 data class Pais(
     @SerializedName("country")

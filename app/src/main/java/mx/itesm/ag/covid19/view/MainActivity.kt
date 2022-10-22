@@ -6,7 +6,10 @@ import androidx.activity.viewModels
 import mx.itesm.ag.covid19.databinding.ActivityMainBinding
 import mx.itesm.ag.covid19.view.AdaptadorPais
 import mx.itesm.ag.covid19.viewmodel.ListaPaisesVM
-
+/**
+ * @author Gilberto AndreGarcía Gaytán
+ * la vista de la main activity
+ */
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val viewModel: ListaPaisesVM by viewModels()

@@ -4,7 +4,10 @@ import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
-
+/**
+ * @author Gilberto AndreGarcía Gaytán
+ *obtener los datos de la api
+ */
 interface ServicioCovidAPI {
     @GET("v3/covid-19/countries")
     fun descargarDatosCovid(): Call<List<Pais>>
